@@ -1,0 +1,11 @@
+<Form [formGroup]="stateForm" novalidate>
+    <div class="state-container-dropdown">
+        <div >
+        <div class="search-results" (click)="selectValue(s)" *ngFor="let s of stateList | searchFilter: getSearchValue()">
+            {{s}}
+        </div>
+        </div>
+    </div>
+    <input id="search" autocomplete="off" (click)="toggleDropDown()" formControlName="search" class="input-underline search-bar" type="text">
+</Form>
+{{selectedVal}}

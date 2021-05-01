@@ -1,0 +1,19 @@
+.pos-rel {
+    position: relative;
+}
+.state-container-dropdown{
+    z-index: 2;
+    margin:2em;
+    width: 80%;
+    height: 100px;
+    max-height: 300px;
+    background: #f6f6f6;
+    overflow-y: auto;
+}
+input{
+    margin-left: 2em;
+    margin-top: 0em;
+}
+.search-results:hover {
+    background: #707070;
+}
