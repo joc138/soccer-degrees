@@ -7,11 +7,11 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./autocomplete.component.css']
 })
 export class AutocompleteComponent implements OnInit {
-  @Input() stateList!: string[];
+  @Input() stateList!:[];
 
   stateForm!: FormGroup;
 
-  selectedVal: string='';
+  selectedVal: any= {abb:'',name:''};
 
   constructor(private fb:FormBuilder, ) {
     this.initForm();
@@ -32,7 +32,8 @@ export class AutocompleteComponent implements OnInit {
   getSearchValue() {
     return this.stateForm.value.search;
   }
-  selectValue(player: string){
-    this.selectedVal = player;
+  selectValue(player: any){
+    this.selectedVal.abb = player.abb;
+    this.selectedVal.name = player.name;
   }
 }
