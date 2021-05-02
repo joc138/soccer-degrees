@@ -25,9 +25,9 @@ export class AppComponent implements OnInit {
   test: string = "";
   isVisible: boolean = false;
   players: string[] = ['pessi','penaldo','lingardinho','shawldini','barnes','antonio','kingArthur','salads','rashgod','mcsauce','awb','flappyhandski'];
-  states:StateObj[]= [{'abb':'AL','name':'Alabama'}, {'abb':'AK','name':'Alaska'}, {'abb':'AZ','name':'Arizona'},{'abb':'AR','name':'Arkansas'},{'abb':'CA','name':'California'},{'abb':'CO','name':'Colorado'},
+  states: any[]= [{'abb':'AL','name':'Alabama'}, {'abb':'AK','name':'Alaska'}, {'abb':'AZ','name':'Arizona'},{'abb':'AR','name':'Arkansas'},{'abb':'CA','name':'California'},{'abb':'CO','name':'Colorado'},
   {'abb':'CT','name':'Connecticut'},{'abb':'DE','name':'Delaware'},{'abb':'DC','name':'District of Columbia'}, {'abb':'FL','name':'Florida'}
-  , {'abb':'GA','name':'Georgia'}, {'abb':'GM','name':'Guam'}, {'abb':'HI','name':'Hawaii'}, {'abb':'ID','name':'Idaho'},{'abb':'IL','name':'Illinois'}, {'abb':'ID','name':'Indiana'}, {'abb':'IO','name':'Iowa'},{'abb':'KS','name':'Kansas'}, {'abb':'KY','name':'Kentucky'}
+  ,{'abb':'GA','name':'Georgia'}, {'abb':'GM','name':'Guam'}, {'abb':'HI','name':'Hawaii'}, {'abb':'ID','name':'Idaho'},{'abb':'IL','name':'Illinois'}, {'abb':'ID','name':'Indiana'}, {'abb':'IO','name':'Iowa'},{'abb':'KS','name':'Kansas'}, {'abb':'KY','name':'Kentucky'}
   , {'abb':'LA','name':'Louisiana'}, {'abb':'ME','name':'Maine'},{'abb':'MI','name':'Marshall Islands'}, {'abb':'ML','name':'Maryland'}, {'abb':'MA','name':'Massachusetts'},{'abb':'MI','name':'Michigan'},{'abb':'MN','name':'Minnesota'}, {'abb':'MI','name':'Mississippi'},
   {'abb':'MS','name':'Missouri'},{'abb':'MO','name':'Montana'}, {'abb':'NB','name':'Nebraska'}, {'abb':'NE','name':'Nevada'}, {'abb':'NM','name':'New Hampshire'}, {'abb':'NJ','name':'New Jersey'}, {'abb':'NM','name':'New Mexico'},{'abb':'NY','name':'New York'}, {'abb':'NC','name':'North Carolina'},
   {'abb':'ND','name':'North Dakota'}, {'abb':'NM','name':'Northern Mariana Islands'}, {'abb':'OH','name':'Ohio'}, {'abb':'OK','name':'Oklahoma'}, {'abb':'OR','name':'Oregon'}, {'abb':'PA','name':'Palau'},{'abb':'PE','name':'Pennsylvania'}, {'abb':'PR','name':'Puerto Rico'},
@@ -55,4 +55,11 @@ export class AppComponent implements OnInit {
   displayFn(user: User): string {
     return user && user.name ? user.name : '';
   }
+  selectPlayer1(player: any){
+    this.player1 = player.name;
+  }
+  selectPlayer2(player: any){
+    this.player2 = player.name;
+  }
+
 }

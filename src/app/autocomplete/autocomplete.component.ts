@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,7 +7,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./autocomplete.component.css']
 })
 export class AutocompleteComponent implements OnInit {
-  @Input() stateList!:[];
+  @Input() stateList = Array<any>();
+  @Output() selectedEvent = new EventEmitter<any>();
 
   stateForm!: FormGroup;
 
@@ -21,19 +22,20 @@ export class AutocompleteComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   initForm(): FormGroup {
     return this.stateForm = this.fb.group({
       search:[null]
     })
   }
-  toggleDropDown(){
-    this.showDropDown = !this.showDropDown;
-  }
+
   getSearchValue() {
     return this.stateForm.value.search;
   }
+
   selectValue(player: any){
     this.selectedVal.abb = player.abb;
     this.selectedVal.name = player.name;
+    this.selectedEvent.emit(this.selectedVal);
   }
 }

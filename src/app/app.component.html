@@ -6,11 +6,11 @@
   <div class="content" role="main">
     <div class="inputs">
         <div class="l-box">
-          <app-autocomplete [stateList]="states"></app-autocomplete>
+          <app-autocomplete [stateList]="states" (selectedEvent)="selectPlayer1($event)"></app-autocomplete>
         </div>
         <span>&#8644;</span>
         <div class="r-box" >
-          <app-autocomplete [stateList]="states"></app-autocomplete>
+          <app-autocomplete [stateList]="states" (selectedEvent)="selectPlayer2($event)"></app-autocomplete>
         </div>
     </div>
 
