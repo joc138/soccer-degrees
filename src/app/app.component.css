@@ -24,11 +24,11 @@
     align-items: center;
 }
 .l-box{
-    margin: 5em;
+    padding: 5em;
     flex: 1;
 }
 .r-box{
-    margin:5em;
+    padding:5em;
     flex: 1;
 }
 h1{
@@ -36,6 +36,7 @@ h1{
     color: white;
 }
 header {
+    padding: 1em;
     background-color: darkgrey;
     border-radius: 15px;
 }
@@ -49,6 +50,9 @@ mat-list-option[aria-selected="true"] {
 }
 p{
     color: black;
+}
+h1 {
+    font-size: 40px;
 }
 .example-form {
     min-width: 150px;

@@ -14,11 +14,11 @@ export class AutocompleteComponent implements OnInit {
 
   selectedVal: any= {abb:'',name:''};
 
+  hasSelected: boolean = false;
+
   constructor(private fb:FormBuilder, ) {
     this.initForm();
    }
-
-  showDropDown=false;
 
   ngOnInit(): void {
   }
@@ -34,6 +34,7 @@ export class AutocompleteComponent implements OnInit {
   }
 
   selectValue(player: any){
+    this.hasSelected = true;
     this.selectedVal.abb = player.abb;
     this.selectedVal.name = player.name;
     this.selectedEvent.emit(this.selectedVal);

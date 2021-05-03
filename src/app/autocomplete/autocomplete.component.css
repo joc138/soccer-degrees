@@ -1,5 +1,16 @@
+.player-choose {
+
+}
 .pos-rel {
     position: relative;
+}
+.selected {
+    height: 30px;
+    position: absolute;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 170px;
+    margin:2em;
 }
 .state-container-dropdown{
     z-index: 2;
